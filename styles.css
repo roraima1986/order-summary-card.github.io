@@ -1,0 +1,146 @@
+:root {
+    --text: 'Red Hat Display', sans-serif;
+    /* Colores Primarios */
+    --pale-blue: hsl(225, 100%, 94%);
+    --pale-blue-opacity: hsla(225, 100%, 94%, 0.3);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-opacity: hsla(245, 75%, 52%, 0.7);
+    /* Colores Neutrales */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: var(--text);
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    font-family: var(--text);
+    font-weight: 700; 
+    cursor: pointer;   
+    transition: all 0.3s;
+}
+
+.btn-link {
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.btn-link:hover {
+    color: var(--bright-blue-opacity);
+    text-decoration: none;
+}
+
+.block-button {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--desaturated-blue);
+}
+
+.btn-purpple {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0px 10px 20px hsla(245, 75%, 52%, 0.3);
+}
+
+.btn-purpple:hover {
+    background-color: var(--bright-blue-opacity);    
+}
+
+.btn-transparent:hover {
+    color: var(--dark-blue);
+}
+
+.main {    
+    margin: 0 auto;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    min-height: 95vh;
+    width: 25rem;       
+}
+
+.img {
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.content {
+    background-color: var(--very-pale-blue);
+    border-radius: 0 0 2rem 2rem;
+    padding: 2rem;
+}
+
+.content .title {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.content .description {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.content .plan {
+    display:flex;   
+    justify-content: space-between;   
+    padding: 1rem;
+    background-color: var(--pale-blue-opacity);
+    border-radius: 1rem;   
+}
+
+.plan-description {
+    display: flex;
+}
+
+.plan-description img {
+    margin-right: 1rem;
+}
+
+.plan-description .annual {
+    color: var(--desaturated-blue);
+}
+
+.plan-description .annual .bold {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.attribution { font-size: 0.8rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Mobile Screen */
+@media screen and (max-width: 450px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);        
+        
+    }
+
+    .main {
+        margin: 1rem;
+        width: 90%;
+    }
+}
